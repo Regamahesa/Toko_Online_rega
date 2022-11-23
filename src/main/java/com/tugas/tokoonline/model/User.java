@@ -1,10 +1,12 @@
 package com.tugas.tokoonline.model;
 
+import com.tugas.tokoonline.auditing.Audit;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends Audit {
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
