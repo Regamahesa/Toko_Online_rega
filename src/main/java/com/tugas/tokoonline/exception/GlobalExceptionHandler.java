@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<?> notFound(NotFoundException notFoundException) {
     return ResponHelper.error(notFoundException.getMessage(), HttpStatus.NOT_FOUND);
